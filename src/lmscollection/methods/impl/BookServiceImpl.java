@@ -19,15 +19,10 @@ public class BookServiceImpl implements BookService {
 
         for (Library library : libraries) {
             if (library.getId().equals(libraryId)) {
-                for (Book b : library.getBooks()) {
-                    if (b.getId().equals(book.getId())) {
-                        return null; // Book already exists
-                    }
-                }
                 library.getBooks().add(book);
                 return book;
             }
-            }
+        }
         return null;
     }
 
@@ -59,15 +54,14 @@ public class BookServiceImpl implements BookService {
     public String deleteBook(Long libraryId, Long bookId) {
         for (Library library : libraries) {
             if (library.getId().equals(libraryId)) {
-                for (Book book : library.getBooks()) {
-                    if (book.getId().equals(bookId)) {
-                        library.getBooks().remove(book);
-                        return "Book deleted";
-                    }
+                Book bookToRemove = getBookById(libraryId, bookId);
+                if (bookToRemove != null) {
+                    library.getBooks().remove(bookToRemove);
+                    return "Китеп өчүрүлдү.";
                 }
             }
         }
-        return "Book not found";
+        return "Китеп табылган жок.";
     }
 
 

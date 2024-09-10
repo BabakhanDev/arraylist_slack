@@ -36,4 +36,13 @@ public class Database {
     public void setReaders(List<Reader> readers) {
         this.readers = readers;
     }
+
+    @Override
+    public String toString() {
+        return "Database{" +
+                "libraries=" + libraries +
+                ", books=" + books +
+                ", readers=" + readers +
+                '}';
+    }
 }
