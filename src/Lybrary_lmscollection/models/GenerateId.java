@@ -1,4 +1,4 @@
-package lmscollection.models;
+package Lybrary_lmscollection.models;
 
 public class GenerateId {
     public static Long libraryId = 0L;

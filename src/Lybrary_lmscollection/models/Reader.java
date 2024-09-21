@@ -1,4 +1,6 @@
-package lmscollection.models;
+package Lybrary_lmscollection.models;
+
+import Lybrary_lmscollection.models.enums.Gender;
 
 public class Reader {
     private Long readerId;
@@ -57,7 +59,7 @@ public class Reader {
 
     @Override
     public String toString() {
-        return "Reader{" +
+        return "\nReader{" +
                 "readerId=" + readerId +
                 ", fullName='" + fullName + '\'' +
                 ", email='" + email + '\'' +

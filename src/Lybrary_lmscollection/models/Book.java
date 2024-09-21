@@ -1,24 +1,28 @@
-package lmscollection.models;
+package Lybrary_lmscollection.models;
 
-public class Book {
+import Lybrary_lmscollection.models.enums.Genre;
+
+import java.util.List;
+
+public class Book  {
     private Long bookId;
     private String name;
     private String author;
     private Genre genre;
 
-    public Book(Long id, String name, String author, Genre genre) {
-        this.bookId = id;
+    public Book(Long bookId, String name, String author, Genre genre) {
+        this.bookId = bookId;
         this.name = name;
         this.author = author;
         this.genre = genre;
     }
 
-    public Long getId() {
+    public Long getBookId() {
         return bookId;
     }
 
-    public void setId(Long id) {
-        this.bookId = id;
+    public void setBookId(Long bookId) {
+        this.bookId = bookId;
     }
 
     public String getName() {
@@ -47,7 +51,7 @@ public class Book {
 
     @Override
     public String toString() {
-        return "Book{" +
+        return "\nBook{" +
                 "bookId=" + bookId +
                 ", name='" + name + '\'' +
                 ", author='" + author + '\'' +

@@ -1,6 +1,6 @@
-package lmscollection.methods;
+package Lybrary_lmscollection.service;
 
-import lmscollection.models.Library;
+import Lybrary_lmscollection.models.Library;
 
 import java.util.List;
 

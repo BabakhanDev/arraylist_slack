@@ -1,6 +1,6 @@
-package lmscollection.methods;
+package Lybrary_lmscollection.service;
 
-import lmscollection.models.Reader;
+import Lybrary_lmscollection.models.Reader;
 
 import java.util.List;
 
@@ -10,4 +10,6 @@ public interface ReaderService {
     Reader getReaderById(Long id);
     Reader updateReader(Long id, Reader reader);
     void assignReaderToLibrary(Long readerId,Long libraryId);
+    String deleteReader(Long id);
 }
+

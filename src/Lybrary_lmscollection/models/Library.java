@@ -1,13 +1,14 @@
-package lmscollection.models;
+package Lybrary_lmscollection.models;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Library {
     private Long libraryId;
     private String name;
     private String address;
-    private List<Book> books;
-    private List<Reader> readers;
+    private List<Book> books = new ArrayList<>();
+    private List<Reader> readers = new ArrayList<>();
 
     public Library(Long libraryId, String bayalinova, String sovetskaya) {
     }
@@ -48,6 +49,15 @@ public class Library {
         return readers;
     }
 
+    public Long getLibraryId() {
+        return libraryId;
+    }
+
+
+    public void setLibraryId(Long libraryId) {
+        this.libraryId = libraryId;
+    }
+
     public void setReaders(List<Reader> readers) {
         this.readers = readers;
     }
@@ -65,7 +75,7 @@ public class Library {
 
     @Override
     public String toString() {
-        return "Library{" +
+        return "\nLibrary{" +
                 "libraryId=" + libraryId +
                 ", name='" + name + '\'' +
                 ", address='" + address + '\'' +

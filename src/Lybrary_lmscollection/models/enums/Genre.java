@@ -1,4 +1,4 @@
-package lmscollection.models;
+package Lybrary_lmscollection.models.enums;
 
 public enum Genre {
     FICTION,       // Художественная литература
